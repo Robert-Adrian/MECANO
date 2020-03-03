@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">884247003082-vjl8f471kikh39iqm6apc6u350a9l5oe.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://mecano-4db81.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">884247003082</string>
+    <string name="google_api_key" translatable="false">AIzaSyDW1teDdzXZT1GtpgUjFm1oqWLOEr834q0</string>
+    <string name="google_app_id" translatable="false">1:884247003082:android:b471cb653d83576cc39933</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDW1teDdzXZT1GtpgUjFm1oqWLOEr834q0</string>
+    <string name="google_storage_bucket" translatable="false">mecano-4db81.appspot.com</string>
+    <string name="project_id" translatable="false">mecano-4db81</string>
+</resources>
