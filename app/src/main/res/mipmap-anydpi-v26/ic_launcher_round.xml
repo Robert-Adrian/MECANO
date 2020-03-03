@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="oval" >
+        <gradient android:startColor="#30964b"/>
+    </shape>
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+
+</adaptive-icon>

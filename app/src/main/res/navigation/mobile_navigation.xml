@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mecano.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_mycar"
+        android:name="com.example.mecano.ui.mycar.MyCarFragment"
+        android:label="@string/menu_car"
+        tools:layout="@layout/fragment_mycar" />
+
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="com.example.mecano.ui.service.ServiceFragment"
+        android:label="@string/menu_service"
+        tools:layout="@layout/fragment_service" />
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.example.mecano.ui.notification.NotificationFragment"
+        android:label="@string/menu_notification"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_friends"
+        android:name="com.example.mecano.ui.friends.FriendsFragment"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_friends" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mecano.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

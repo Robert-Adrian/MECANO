@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "884247003082",
+    "firebase_url": "https://mecano-4db81.firebaseio.com",
+    "project_id": "mecano-4db81",
+    "storage_bucket": "mecano-4db81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884247003082:android:b471cb653d83576cc39933",
+        "android_client_info": {
+          "package_name": "com.example.mecano"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884247003082-i2d3mob8utde8jjdkjh9g48n4r6b213a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mecano",
+            "certificate_hash": "e4967bd84c22e4228a01daf68b380e9eeda0be91"
+          }
+        },
+        {
+          "client_id": "884247003082-vjl8f471kikh39iqm6apc6u350a9l5oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW1teDdzXZT1GtpgUjFm1oqWLOEr834q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884247003082-vjl8f471kikh39iqm6apc6u350a9l5oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

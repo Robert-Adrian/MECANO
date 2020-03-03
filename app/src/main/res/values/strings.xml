@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MECANO</string>
+    <string name="title_activity_mecano_main">MecanoMainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="facebook_app_id">2336280566474085</string>
+    <string name="fb_login_protocol_scheme">fb2336280566474085</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_car">My car</string>
+    <string name="menu_service">Find service</string>
+    <string name="menu_notification">My notification</string>
+    <string name="menu_friends">Friends</string>
+    <string name="menu_about">About my car</string>
+</resources>
