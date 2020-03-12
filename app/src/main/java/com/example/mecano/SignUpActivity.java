@@ -45,16 +45,29 @@ public class SignUpActivity extends AppCompatActivity {
         userPwd = (EditText) findViewById(R.id.editText4);
 
         if (firstName.getText().toString().equals("") || lastName.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter a valid name", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "Enter a valid name", Toast.LENGTH_SHORT).show();
         } else if (userName.getText().toString().equals("")){
-            Toast.makeText(SignUpActivity.this, "Enter a valid username", Toast.LENGTH_SHORT);
+            Toast.makeText(SignUpActivity.this, "Enter a valid username", Toast.LENGTH_SHORT).show();
         } else if (email.getText().toString().equals("")) {
-            Toast.makeText(SignUpActivity.this, "Enter a valid email", Toast.LENGTH_SHORT);
+            Toast.makeText(SignUpActivity.this, "Enter a valid email", Toast.LENGTH_SHORT).show();
         } else if (userPwd.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(), "Enter a valid password", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "Enter a valid password", Toast.LENGTH_SHORT).show();
         } else {
 
-            mAuth.createUserWithEmailAndPassword(email.getText().toString(), userPwd.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+           User newUser = new User(firstName.getText().toString(), lastName.getText().toString(), userName.getText().toString(), email.getText().toString(), userPwd.getText().toString());
+
+           //newUser.userExist();
+
+           if (!newUser.getFlag()) {
+               newUser.userAdd();
+               Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+               startActivity(intent);
+           } else {
+               Toast.makeText(getApplicationContext(), "Utilizatorul exista deja ! " + newUser.getFlag(), Toast.LENGTH_SHORT).show();
+           }
+
+
+            /* mAuth.createUserWithEmailAndPassword(email.getText().toString(), userPwd.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
 
                 @Override
                 public void onComplete(Task<AuthResult> task) {
@@ -68,7 +81,7 @@ public class SignUpActivity extends AppCompatActivity {
                         updateUI(null);
                     }
                 }
-            });
+            });*/
         }
 
     }

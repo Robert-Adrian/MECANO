@@ -123,24 +123,32 @@ public class MainActivity extends AppCompatActivity {
         } else if (userPwd.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Enter an password !", Toast.LENGTH_SHORT).show();
         } else {
-            mAuth.signInWithEmailAndPassword(userName.getText().toString(), userPwd.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
-                @Override
-                public void onComplete(Task<AuthResult> task) {
+            user = mAuth.getCurrentUser();
 
-                    if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), "Log In success !", Toast.LENGTH_SHORT).show();
-                        user = mAuth.getCurrentUser();
-                        updateUI(user);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Log In failed !", Toast.LENGTH_SHORT).show();
-                        updateUI(null);
+            if (user.getDisplayName().equals(userName.getText().toString().trim())) {
+
+                mAuth.signInWithEmailAndPassword(userName.getText().toString(), userPwd.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                    @Override
+                    public void onComplete(Task<AuthResult> task) {
+
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Log In success !", Toast.LENGTH_SHORT).show();
+                            user = mAuth.getCurrentUser();
+                            updateUI(user);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Log In failed !", Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
                     }
-                }
 
-            });
+                });
 
+            } else {
+                Toast.makeText(getApplicationContext(), "User: " + userName.getText().toString() + " don't exist!", Toast.LENGTH_SHORT).show();
             }
+        }
 
     }
 
